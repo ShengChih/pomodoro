@@ -1,0 +1,102 @@
+@import 'basic.scss';
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  * {
+    position: relative;
+    font-family: 'TCF-Print-Bold', 'serif';
+    outline: 1px solid black; // development
+  }
+}
+
+.main-view {
+  @include base-desktop {
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+  }
+}
+
+.current-doing {
+  position: absolute;
+  @include base-desktop {
+    width: 894.36px;
+    height: 137.11px;
+    top: 112px;
+    left: 112px;
+  }
+}
+
+.doing-circle {
+  position: absolute;
+  @include base-desktop {
+    border-width: 5px;
+    width: 50px;
+    height: 50px;
+    top: 48px;
+    left: 53px;
+  }
+}
+
+.doing-task-text {
+  position: absolute;
+  @include base-desktop {
+    top: 0;
+    bottom: 0;
+    left: 111px;
+    font-size: 45px;
+    margin: auto 0;
+    line-height: 137.11px;
+  }
+}
+
+.todo-check-circle {
+  border-style: solid;
+  border-color: #D9674E;
+  border-radius: 100%;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  @include base-desktop {
+    top: 315px;
+    left: 150px;
+    width: 699px;
+    height: 253px;
+  }
+}
+
+.todo-item {
+  @include base-desktop {
+    margin-left: 11px;
+    height: 61px;
+  }
+}
+
+.todo-circle {
+  @include base-desktop {
+    border-width: 5px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.todo-task-text {
+  @include base-desktop {
+    margin-left: 12px;
+    top: 0;
+    bottom: 0;
+    font-size: 35px;
+    line-height: 61px;
+  }
+}
+
+.todo-play-btn {
+  @include base-desktop {
+    width: 61px;
+    height: 61px;
+  }
+}

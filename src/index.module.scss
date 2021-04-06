@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'TCF-Print-Bold';
+  src: url('fonts/TCF-Print-Bold/TCF-Print-Bold.ttf.woff') format('woff'),
+        url('fonts/TCF-Print-Bold/TCF-Print-Bold.ttf.svg#TCF-Print-Bold') format('svg'),
+        url('fonts/TCF-Print-Bold/TCF-Print-Bold.ttf.eot'),
+        url('fonts/TCF-Print-Bold/TCF-Print-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+:global {
+  html, body {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFE5B5;
+  }
+}

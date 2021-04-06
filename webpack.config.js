@@ -19,7 +19,35 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [/*MiniCssExtractPlugin.loader, */"style-loader", 'css-loader', 'sass-loader'],
+        use: [
+          /* MiniCssExtractPlugin.loader, */
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                includePaths: [
+                  "./src"
+                ]
+              }
+            }
+          }
+        ],
+      },
+      {
+        test: /\.(woff|woff2|eot|svg)$/,
+        loader: "file-loader",
+        options: {
+          name: "[hash].[ext]"
+        }
+      },
+      {
+        test: /\.(jpg|jpeg|png)$/,
+        loader: "url-loader",
+        options: {
+          limit: 50000
+        }
       }
     ]
   },
@@ -35,9 +63,8 @@ module.exports = {
     filename: "bundle.js"
   },
   devServer: {
-    contentBase: path.join(__dirname, "public/"),
+    contentBase: path.join(__dirname, "dist/"),
     port: 8080,
-    publicPath: "http://localhost:8080/dist/",
     hotOnly: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin(), new MiniCssExtractPlugin()]

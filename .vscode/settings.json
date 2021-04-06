@@ -1,0 +1,9 @@
+{
+    "eslint.debug": true,
+    "eslint.nodePath": "/home/ms0529756/.nvm/versions/node/v14.16.0/bin/node",
+    "eslint.options": {
+        "rules": {
+            "quotes": [2, "double"]
+        }
+    }
+}

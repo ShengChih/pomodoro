@@ -1,0 +1,12 @@
+/* #### Desktops #### */
+@mixin base-desktop {
+  @media all and (min-width: 1730.5px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin fluid-desktop {
+  @media all and (min-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
